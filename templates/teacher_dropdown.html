@@ -1,0 +1,117 @@
+<style>
+   .root{
+         display: flex;
+         align-items: center;
+        justify-content: center;
+    }
+    .subdiv{
+        width: 500px;
+        height: auto;
+        border: 0.5px solid #bdc3c7;
+        padding: 6px;
+        margin-top: 50px;
+        border-radius: 10px;
+        background-color: #ecf0f1;
+   
+      }
+    .heading{
+        width: auto;
+        height:auto;
+        align-items: center;
+        justify-content: center;
+       display: flex;
+       border: 0.5px solid #bdc3c7;
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+        padding: 6px;
+       background-color: #bdc3c7;
+    }
+   .title{
+         color: #FFFFFF;
+   }
+   .divbutton{
+       display: flex;
+       align-content: center;
+       justify-content: center;
+   
+   
+   }
+    .buttonstyle{
+        width:220px;
+        margin: 5px;
+    }
+    select{
+width: 100%;
+border-radius:05px;
+padding: 10px 15px 10px 15px;
+    }
+</style>
+<!DOCTYPE html>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+   
+   <html lang="en">
+      <head>
+         <title>Mark Attendance</title>
+      </head>
+   <body style="background-color:#273c75;">
+      <form action="/displaymarkedattendance" method="post" enctype="multipart/form-data">
+          {% csrf_token %}
+      <div class="root ">
+         <div class="subdiv">
+             <div class="heading">
+                 <h3 class="title">Attendance Entry </h3>
+             </div>
+             <br>
+   <select name='department'>
+      <option>-Select Department-</option>
+      <option>Computer Science</option>
+      <option>Mechanical </option>
+      <option>Information Tech. </option>
+      <option>Electronics and Communication</option>
+      </select>
+      <br><br>
+      <select name='year'>
+         <option>-Select Year-</option>
+         <option>I</option>
+         <option>II</option>
+         <option>III </option>
+         <option>IV </option>         
+         </select>
+         <br><br>
+         <select name='semester'>
+            <option>-Select Semester-</option>
+            <option>I</option>
+            <option>II</option>
+            <option>III </option>
+            <option>IV </option>  
+            <option>V </option> 
+            <option>VI</option>
+            <option>VII</option>
+            <option>VIII </option>                   
+            </select>
+            <br><br>
+            
+               <input type="text" name="scode"  required class="form-control"   placeholder="Enter Subject Code">              
+               <br>               
+                  <input type="text" name="tname"  required class="form-control"   placeholder="Teacher Name">
+                  <br>  
+
+
+         <center>
+            <input type="submit" value='Submit' class="btn btn-primary buttonstyle" >
+            <input type="reset"  class="btn btn-primary buttonstyle" >
+         </center></div>
+   </div>
+         </form>
+         <div class="form-group divbutton">
+            <label class="msg" >{{ msg }}</label>
+               </div>
+      </body>         
+
+</html>

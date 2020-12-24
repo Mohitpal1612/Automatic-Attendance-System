@@ -1,0 +1,130 @@
+
+<style>
+    .nav
+    {width:100%;
+    height:49px;
+    background-color:hsla(165, 75%, 30%, 0.74);
+    }
+    .nav a
+    {
+        float:left;
+        text-decoration:none;
+        color:black;
+        padding:14px 26px;
+        font-size:17px;
+        transition:0.6s all;
+    }
+    .nav .search
+    { 
+       float:right;
+    }
+    .nav input[type=text]
+    {
+        padding:6px;
+        margin-top:8px;
+        border:none;
+        font-size:17px;
+    }
+    .nav .search button
+    {
+        float:right;
+        padding:6px;
+        margin-top:8px;
+        font-size:17px;
+        margin-right:16px;
+        border:none;
+        background-color:#ddd;
+        cursor:pointer;
+        transition:0.6s all;
+    }
+    .nav .search button:hover
+    { 
+     background-color:dodgerblue;
+     color:#fff;
+    }
+    .center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    }
+    </style>
+    {% load static %}
+    <!DOCTYPE html>
+       <meta charset="utf-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+       
+       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+       <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+       
+       
+       <html lang="en">
+       <head>
+        <title>Attendence Management</title>
+        </head>
+        	
+        <body>
+          <div class="nav">
+            <a href="#" >Home</a></li>
+            <a href="#">Developer</a></li>
+    
+            
+            
+            <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
+            Sign Up   
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="/teacher_register">Sign up as Teacher</a>
+            <a class="dropdown-item" href="/student_register">Sign up as Student</a>
+            </div>
+         </li>
+    
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Login
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="/teacher_login">Login as Teacher</a>
+            <a class="dropdown-item" href="/student_login">Login as Student</a>
+            </div>
+        </li>
+       
+
+            </div>
+       </div>
+      </td>
+      </tr>
+      <table width="100%" style="border-collapse: collapse;">
+        <tr><td>
+        <tr>
+            <td style="background-color: #e6e6fa; width: 100%; height: 460px;">
+              <img src="{% static  'images/Screenshot (129).png'%}" width="75%" class="center">
+              
+             
+            </td>
+        </tr> 
+    
+ <!--Footer Section -->
+ <tr>   
+    <td colspan="2" style="background-color: #9a8ac7; text-align: center;" >
+    <p style="color: #371261"><strong>All Rights Reserved. No Copyright</strong></p>
+    <h6>follow us on:</h6>
+    <a href="https://www.facebook.com/profile.php?id=100026452926163"><img src="{% static  'images/fb.png'%}"></a>
+    <img src="{% static  'images/tw.jpeg'%}"/>
+    <a href="https://www.instagram.com/mohit16pal?r=nametag"><img src="{% static  'images/ins.jpeg'%}"/></a>
+        <br>
+        <br>
+        <center><h6>Designed and Developed by: Mohit Pal (mohit16pal@gmail.com)</h6></center>
+     </td>
+ </tr>		
+</table>
+</body>
+</html>      
+       
+        
+       
+       
+       

@@ -1,0 +1,1 @@
+web: gunicorn FaceRecognitionDjango.wsgi --log-file -
